@@ -15,6 +15,12 @@ cp .env-example .env # Fill out .env with your HF token and OpenAI API key
 python3 code/create_synthetic_data.py
 ```
 
+### Input data source
+https://huggingface.co/datasets/devinitorg/cdp-paf-meta-limited
+
+### Output data location
+https://huggingface.co/datasets/devinitorg/cdp-paf-meta-limited-synthetic
+
 ## Train primary model
 It is recommended you run this code in Google Colab or with a GPU.
 Commented out code is left at the top for easy use with Colab.
@@ -22,12 +28,18 @@ Commented out code is left at the top for easy use with Colab.
 python3 code/train_multiclass_weighted.py
 ```
 
+### Pretrained model weights
+https://huggingface.co/devinitorg/cdp-multi-classifier-weighted
+
 ## Train sub model
 It is recommended you run this code in Google Colab or with a GPU.
 Commented out code is left at the top for easy use with Colab.
 ```
 python3 code/train_multiclass_sub_classes_weighted.py
 ```
+
+### Pretrained model weights
+https://huggingface.co/devinitorg/cdp-multi-classifier-sub-classes-weighted
 
 ## Run model inference
 This relies on a CSV file of the OECD DAC CRS and outputs one file per year, e.g. crs_2022_predictions.csv.
