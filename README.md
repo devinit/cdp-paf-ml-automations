@@ -10,6 +10,11 @@ pip install -r requirements.txt
 cp .env-example .env # Fill out .env with your HF token and OpenAI API key
 ```
 
+## TF-IDF keyword exploration
+```
+python3 code/keyword_exploration.py
+```
+
 ## Synthetic data creation (from CRS project titles and descriptions)
 ```
 python3 code/create_synthetic_data.py
